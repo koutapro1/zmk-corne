@@ -11,11 +11,11 @@
 
 &kscan0 {
 	col-gpios
-		= <&gpio1 11 GPIO_ACTIVE_HIGH>	//Col0
-		, <&gpio1 12 GPIO_ACTIVE_HIGH>  //Col1
-		, <&gpio1 13 GPIO_ACTIVE_HIGH>  //Col2
-		, <&gpio1 14 GPIO_ACTIVE_HIGH>  //Col3
-		, <&gpio1 15 GPIO_ACTIVE_HIGH>  //Col4
-		, <&gpio0 10 GPIO_ACTIVE_HIGH>  //Col5
+		= <&xiao_d 6 GPIO_ACTIVE_HIGH>   //Col0 (rev2基板用)
+		, <&xiao_d 7 GPIO_ACTIVE_HIGH>   //Col1 (rev2基板用)
+		, <&xiao_d 8 GPIO_ACTIVE_HIGH>   //Col2 (rev2基板用)
+		, <&xiao_d 10 GPIO_ACTIVE_HIGH>  //Col3 (rev2基板用)
+		, <&xiao_d 3 GPIO_ACTIVE_HIGH>    //Col4 (rev2基板用)
+		, <&gpio0 10 GPIO_ACTIVE_HIGH>   //Col5 (rev2基板用)
 		;
 };
