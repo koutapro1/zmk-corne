@@ -15,3 +15,26 @@ on:
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+
+  swap-files:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download firmware
+        uses: actions/download-artifact@v4
+        with:
+          name: firmware
+          path: firmware
+
+      - name: Swap chipper_left and chipper_right filenames
+        working-directory: firmware
+        run: |
+          mv chipper_left-seeeduino_xiao_ble-zmk.uf2 temp.uf2
+          mv chipper_right-seeeduino_xiao_ble-zmk.uf2 chipper_left-seeeduino_xiao_ble-zmk.uf2
+          mv temp.uf2 chipper_right-seeeduino_xiao_ble-zmk.uf2
+
+      - name: Upload firmware
+        uses: actions/upload-artifact@v4
+        with:
+          name: firmware
+          path: firmware/
