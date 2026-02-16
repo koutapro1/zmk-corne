@@ -15,6 +15,8 @@ on:
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    with:
+      archive_name: firmware-build
 
   swap-files:
     needs: build
@@ -23,7 +25,7 @@ jobs:
       - name: Download firmware
         uses: actions/download-artifact@v4
         with:
-          name: firmware
+          name: firmware-build
           path: firmware
 
       - name: Swap chipper_left and chipper_right filenames
