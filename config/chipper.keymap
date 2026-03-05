@@ -26,6 +26,11 @@
             bindings = <&bootloader>;
             key-positions = <11 35 39 6>;
         };
+
+        to_onishi_layer {
+            bindings = <&tog 1>;
+            key-positions = <3 4 5>;
+        };
     };
 
     behaviors {
@@ -59,17 +64,17 @@
             bindings = <
 &kp TAB        &kp Q  &kp W  &kp E         &kp R                    &kp T                      &kp Y                      &kp U                                   &kp I           &kp O    &kp P     &kp MINUS
 &mt LCTRL ESC  &kp A  &kp S  &kp D         &kp F                    &kp G                      &kp H                      &kp J                                   &kp K           &kp L    &kp SEMI  &mt LCTRL SQT
-&kp LSHFT      &kp Z  &kp X  &kp C         &kp V                    &kp B                      &kp N                      &kp M                                   &kp COMMA       &kp DOT  &kp FSLH  &kp RS(EQUAL)
+&kp LSHFT      &kp Z  &kp X  &kp C         &kp V                    &kp B                      &kp N                      &kp M                                   &kp COMMA       &kp DOT  &kp FSLH  &kp EQUAL
                              &kp LEFT_ALT  &mt LEFT_GUI LANGUAGE_2  &layer_tap_repeat 2 SPACE  &layer_tap_repeat 3 ENTER  &hold_tap_repeat RIGHT_SHIFT BACKSPACE  &kp LANGUAGE_1
             >;
         };
 
-        windows_layer {
+        onishi_layer {
             bindings = <
-&kp TAB       &kp Q  &kp W  &kp E  &kp R      &kp T        &kp Y        &kp U                      &kp I           &kp O    &kp P     &kp MINUS
-&mt LGUI ESC  &kp A  &kp S  &kp D  &kp F      &kp G        &kp H        &kp J                      &kp K           &kp L    &kp SEMI  &mt LCTRL SQT
-&kp LSHFT     &kp Z  &kp X  &kp C  &kp V      &kp B        &kp N        &kp M                      &kp COMMA       &kp DOT  &kp FSLH  &kp EQUAL
-                            &mo 0  &kp LCTRL  &lt 1 SPACE  &lt 4 ENTER  &mt RIGHT_SHIFT BACKSPACE  &kp LANGUAGE_1
+&kp TAB               &kp Q  &kp L  &kp U         &kp COMMA                    &kp PERIOD                 &kp F                      &kp W                                   &kp R           &kp Y  &kp P  &kp MINUS
+&mt LEFT_CONTROL ESC  &kp E  &kp I  &kp A         &kp O                        &kp MINUS                  &kp K                      &kp T                                   &kp N           &kp S  &kp H  &mt LCTRL SQT
+&kp LSHFT             &kp Z  &kp X  &kp C         &kp V                        &kp SEMICOLON              &kp G                      &kp D                                   &kp M           &kp J  &kp B  &kp EQUAL
+                                    &kp LEFT_ALT  &mt LEFT_COMMAND LANGUAGE_2  &layer_tap_repeat 2 SPACE  &layer_tap_repeat 3 ENTER  &hold_tap_repeat RIGHT_SHIFT BACKSPACE  &kp LANGUAGE_1
             >;
         };
 
